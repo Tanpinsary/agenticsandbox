@@ -1,0 +1,12 @@
+{
+  "backend": "local",
+  "allow_unsafe_local": true,
+  "state_dir": ".state",
+  "admin_token_file": ".state/admin.token",
+  "repos": {},
+  "runtimes": {
+    "agentic": {"networks": ["none"]}
+  },
+  "networks": {"none": {}},
+  "agents": {}
+}

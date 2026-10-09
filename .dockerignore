@@ -1,0 +1,11 @@
+# The build context is public runtime code only, including for a remote daemon.
+**
+!runtime/
+!runtime/Dockerfile
+!runtime/entrypoint.sh
+!Cargo.toml
+!Cargo.lock
+!build.rs
+!src/
+!src/**/*.rs
+!src/tools.json

@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.state/
+.coverage
+build/
+dist/
+config.json
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.DS_Store
+.terraform/
+target/
+*.tfstate*
+*.tfvars
+.coder/
+
+# 内部文档与验收证据只保留在本地，不随仓库发布。
+/docs/
+/artifacts/

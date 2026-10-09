@@ -1,0 +1,51 @@
+{
+  "backend": "remote",
+  "state_dir": ".state",
+  "admin_token_file": ".state/admin.token",
+  "repos": {},
+  "runtimes": {
+    "agentic": {
+      "image_digest": "REPLACE_WITH_FULL_LOCAL_SHA256_IMAGE_ID_OR_REGISTRY_DIGEST",
+      "worker_source_sha256": "REPLACE_WITH_ACTUAL_WORKER_SOURCE_SHA256",
+      "architecture": "amd64",
+      "task_uid": 10001,
+      "networks": [
+        "none"
+      ],
+      "remote_host": "lab"
+    },
+    "agentic-second": {
+      "image_digest": "REPLACE_WITH_FULL_LOCAL_SHA256_IMAGE_ID_OR_REGISTRY_DIGEST",
+      "worker_source_sha256": "REPLACE_WITH_ACTUAL_WORKER_SOURCE_SHA256",
+      "architecture": "amd64",
+      "task_uid": 10001,
+      "networks": [
+        "none"
+      ],
+      "remote_host": "second"
+    }
+  },
+  "networks": {
+    "none": {}
+  },
+  "limits": {
+    "max_tasks": 8,
+    "max_concurrent_executions": 4
+  },
+  "remote": {
+    "default": "lab",
+    "hosts": {
+      "lab": {
+        "host": "user@linux-host",
+        "namespace": "my-controller",
+        "port": 22,
+        "ipv4": true
+      },
+      "second": {
+        "host": "user@second-host",
+        "namespace": "my-controller",
+        "identity_file": "/path/to/private/key"
+      }
+    }
+  }
+}
